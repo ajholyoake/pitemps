@@ -4,7 +4,7 @@ class Thermometer(object):
 
     def __init__(self,device):
         self.device = device
-        self.history = collections.deque(
+        self.history = collections.deque(maxlen = 100)
         #device is the folder i.e. /sys/bus/w1/devices/xxx
 
     @property
